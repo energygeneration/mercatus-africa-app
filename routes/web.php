@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -15,11 +16,17 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [AppController::class, 'index'])->name('home');
 
 Auth::routes();
+
+Route::get('/favoris', [HomeController::class, 'favoris'])->name('favoris');
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+Route::get('/create/annonce', [HomeController::class, 'create'])->name('create.annonce');
 
 /*------------------------------------------
 --------------------------------------------
@@ -28,7 +35,7 @@ All Normal Users Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:user'])->group(function () {
 
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index2'])->name('home2');
 });
 
 /*------------------------------------------

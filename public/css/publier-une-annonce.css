@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+    font-family: 'Libre Bodoni', serif;
+}
+
+h1,h2,h3,h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold !important;
+}
+
+.color1{
+    color: #B22222;
+}
+
+.color2{
+    color: #253340;
+}
+
+.bg-color1{
+    background-color: #B22222;
+}
+
+.search-bg-color1{
+    background-color: #F59F9F;
+}
+
+.w-search{
+    width: 350px !important;
+}
+
+.fs-nav{
+    font-size: 1.2em !important;
+}
+
+.py-perso{
+    padding: 1px !important;
+}
+
+.footer-bg-color{
+    background-color: #9B9B9B;
+}
+
+.rounded-newsletter{
+    border-radius: 7px 0 0 7px;
+}
+.rounded-newsletter-btn{
+    border-radius: 0 7px 7px 0;
+}
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 140px;
+}
+
+.text-h1-img{
+    margin: 11% auto;
+}
+
+.favoris-icon{
+    left: 85%;
+    top: 200px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.search-focus:focus{
+    border-radius: 0.5rem 0 0 0.5em;
+    background-color: white !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.annonce-hover:hover{
+    box-shadow: 10px 10px 10px #6d6e6e !important;
+    width: 102%;
+}
+
+
+@media all and (max-width: 1100px) and (min-width: 900px){
+    .fs-nav{
+        padding: 0 !important;
+        font-size: 13px !important;
+    }
+
+    .truncate {
+        width: 80px;
+    }
+}
+
+@media all and (max-width: 1000px){
+    .zero{
+        display: none;
+    }
+
+    .w-mobile-tab{
+        width: 75% !important;
+    }
+
+    .truncate {
+        width: 100%;
+    }
+}
+
+@media  all and (max-width: 700px){
+    .w-mobile-annonce{
+        width: 90% !important;
+        padding: 20px !important;
+    }
+
+    .mobile-center{
+        margin: 0 auto;
+    }
+
+    .w-search{
+        width: 75% !important;
+    }
+
+    .text-h1-img{
+        margin: auto;
+        font-size: 1.3em !important;
+    }
+
+    .w-title-div{
+        width: 100% !important;
+    }
+}
+
+
+
+/*=========================*/
+
+*,::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-perso{
+    height: 60em;
+}
+
+.onglets{
+    cursor: pointer;
+}
+
+
+.contenu{
+    position: absolute;
+    opacity: 0;
+}
+
+
+/*anim*/
+
+.active{
+    color: #B22222;
+    transition: all 0.3s ease;
+}
+
+.activeContenu{
+    animation: fade 0.5s forwards;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.roun{
+    width: 60px;
+    height: 60px;
+}
