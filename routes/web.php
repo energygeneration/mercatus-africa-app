@@ -19,9 +19,14 @@ use App\Http\Controllers\HomeController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 Route::get('/', [AppController::class, 'index'])->name('home');
 
 Auth::routes();
+
+Route::get('/favoris', [HomeController::class, 'favoris'])->name('favoris');
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+Route::get('/create/annonce', [HomeController::class, 'create'])->name('create.annonce');
 
 /*------------------------------------------
 --------------------------------------------

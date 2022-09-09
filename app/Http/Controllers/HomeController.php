@@ -16,17 +16,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index2()
-    {
-        return view('home2');
-    }
-
-    /**
+        /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -35,5 +25,28 @@ class HomeController extends Controller
     {
         return view('adminHome');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+
+
+    public function favoris()
+    {
+        return view('favoris');
+    }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
+    public function create()
+    {
+        return view('add_annonce');
+    }
+
 
 }
