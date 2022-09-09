@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background: rgb(231, 231, 231);
+}
+
 .title{
     font-family: 'Libre Bodoni', serif;
 }

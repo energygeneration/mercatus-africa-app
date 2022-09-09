@@ -33,10 +33,11 @@ Route::get('/create/annonce', [HomeController::class, 'create'])->name('create.a
 All Normal Users Routes List
 --------------------------------------------
 --------------------------------------------*/
-Route::middleware(['auth', 'user-access:user'])->group(function () {
+// Route::middleware(['auth', 'user-access:user'])->group(function () {
 
-    Route::get('/home', [HomeController::class, 'index2'])->name('home2');
-});
+
+// });
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 /*------------------------------------------
 --------------------------------------------
