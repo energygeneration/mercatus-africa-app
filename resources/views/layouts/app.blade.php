@@ -50,7 +50,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link fs-nav d-flex text-white" href="{{route('create.annonce')}}">
+                    <a class="nav-link fs-nav d-flex text-white" href="{{route('add.annonce')}}">
                         <img src=" {{asset('/images/plus.svg')}} " class="mx-1" alt="logo de mercatus africa">
                          Poster une annonce</a>
                   </li>

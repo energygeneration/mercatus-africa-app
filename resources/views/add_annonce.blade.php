@@ -7,7 +7,7 @@
         <h2 class="text-center mb-5">Soumettez votre annonce</h2>
         <p class="fs-5 my-5"> Les champs obligatoires sont signalés par un *.</p>
 
-        <form method= "POST" action="{{route('home')}}" enctype="multipart/form-data">
+        <form method= "POST" action="{{route('create.annonce')}}" enctype="multipart/form-data">
           @csrf
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Choisissez une catégorie*</label>
@@ -55,6 +55,9 @@
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Descriptif*</label>
             <textarea name="descriptif" class="form-control" id="exampleFormControlTextarea1" rows="7" required></textarea>
+            @error('Descriptif')
+                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+            @enderror
           </div>
           <button type="submit" class="border-0 rounded-3 fs-5 p-2 bg-color1 text-white my-3 btn-lg">Poster l’annonce</button>
         </form>
