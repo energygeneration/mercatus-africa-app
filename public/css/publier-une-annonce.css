@@ -5,13 +5,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    background: rgb(252, 253, 253);
+}
+
 .title{
     font-family: 'Libre Bodoni', serif;
 }
 
 h1,h2,h3,h4{
     font-family: 'Poppins', sans-serif;
-    font-weight: bold !important;
+    font-weight: bolder;
 }
 
 .color1{
@@ -84,7 +88,7 @@ h1,h2,h3,h4{
 
 .annonce-hover:hover{
     box-shadow: 10px 10px 10px #6d6e6e !important;
-    width: 102%;
+    /* width: 102%; */
 }
 
 
