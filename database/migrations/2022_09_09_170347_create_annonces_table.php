@@ -17,13 +17,14 @@ return new class extends Migration
             $table->id();
             $table ->string('category');
             $table ->string('title');
-            $table ->integer('price');
+            $table ->string('price')->nullable();
             $table ->string('localisation');
             $table ->string('tel_num');
-            $table ->string('whatsapp_num');
-            $table ->text('email_annonce');
-            $table ->string('img_annonce');
+            $table ->string('whatsapp_num')->nullable();
+            $table ->text('email_annonce')->nullable();
+            $table ->string('img_annonce')->nullable();
             $table ->longText('descriptif');
+            $table ->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
