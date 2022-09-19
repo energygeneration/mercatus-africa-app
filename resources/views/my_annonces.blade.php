@@ -35,7 +35,6 @@
                         </tr>
                         @if (!empty($annonces) && $annonces->count())
 
-
                         @foreach ($annonces as $annonce)
                             @if($annonce->user_id === auth()->id())
                                 <tr>
