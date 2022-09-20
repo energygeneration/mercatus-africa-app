@@ -11,12 +11,9 @@
             @foreach ($annonces as $annonce)
 
             <div class="col mb-4 cursor-pointer">
-                <a href="{{ route('show.annonce',$annonce->id) }}" class="nav-link">
+                <a href="{{ route('show.annonce',$annonce->id) }}" class="nav-link ">
                 <div class="card shadow annonce-hover pb-3 bg-body rounded-4">
                     <img src="{{Storage::url($annonce->img_annonce)}}" class="rounded-3 rounded-bottom img-home" height="200" alt="Image de l'annonce">
-                    <div class="position-absolute favoris-icon bg-body rounded-circle">
-                        <img src=" {{asset('/images/favoris.svg')}} " class="mt-2 mx-1 text-center w-75" alt="Image d'ajout de favoris">
-                    </div>
                     <div class="px-2 pt-1">
                         <h5 class="m-0 pt-2">{{$annonce->title}}</h5>
                         <p class="fs-5 m-0 pt-1 color1">{{$annonce->price}} CFA</p>
@@ -35,17 +32,14 @@
             @foreach ($annonces2 as $annonce2)
 
             <div class="col mb-4 cursor-pointer">
-                <a href="{{ route('show.annonce',$annonce2->id) }}" class="nav-link">
+                <a href="{{ route('show.annonce',$annonce2->id) }}" class="nav-link ">
                 <div class="card shadow annonce-hover pb-3 bg-body rounded-4">
-                    <img src="{{Storage::url($annonce2->img_annonce)}}" class="rounded-3 rounded-bottom img-home" height="200" alt="...">
-                    <div class="position-absolute favoris-icon bg-body rounded-circle">
-                        <img src=" {{asset('/images/favoris.svg')}} " class="mt-2 mx-1 text-center w-75" alt="logo de mercatus africa">
-                    </div>
+                    <img src="{{Storage::url($annonce2->img_annonce)}}" class="rounded-3 rounded-bottom img-home" height="200" alt="Image de l'annonce">
                     <div class="px-2 pt-1">
                         <h5 class="m-0 pt-2">{{$annonce2->title}}</h5>
                         <p class="fs-5 m-0 pt-1 color1">{{$annonce2->price}} CFA</p>
                         <div class="d-flex">
-                            <img src=" {{asset('/images/map.svg')}} " class=" w-32" alt="logo de mercatus africa">
+                            <img src=" {{asset('/images/map.svg')}} " class=" w-32" alt="logo de localisation">
                             <p class="fs-5 m-0">{{$annonce2->localisation}}</p>
                         </div>
                         <p class="pt-2">Publier le {{$annonce2->updated_at->format(' j M Y')}}</p>
@@ -59,17 +53,14 @@
             @foreach ($annonces3 as $annonce3)
 
             <div class="col mb-4 cursor-pointer">
-                <a href="{{ route('show.annonce',$annonce3->id) }}" class="nav-link">
+                <a href="{{ route('show.annonce',$annonce3->id) }}" class="nav-link ">
                 <div class="card shadow annonce-hover pb-3 bg-body rounded-4">
-                    <img src="{{Storage::url($annonce3->img_annonce)}}" class="rounded-3 rounded-bottom img-home" height="200" alt="...">
-                    <div class="position-absolute favoris-icon bg-body rounded-circle">
-                        <img src=" {{asset('/images/favoris.svg')}} " class="mt-2 mx-1 text-center w-75" alt="logo de mercatus africa">
-                    </div>
+                    <img src="{{Storage::url($annonce3->img_annonce)}}" class="rounded-3 rounded-bottom img-home" height="200" alt="Image de l'annonce">
                     <div class="px-2 pt-1">
                         <h5 class="m-0 pt-2">{{$annonce3->title}}</h5>
                         <p class="fs-5 m-0 pt-1 color1">{{$annonce3->price}} CFA</p>
                         <div class="d-flex">
-                            <img src=" {{asset('/images/map.svg')}} " class=" w-32" alt="logo de mercatus africa">
+                            <img src=" {{asset('/images/map.svg')}} " class=" w-32" alt="logo de localisation">
                             <p class="fs-5 m-0">{{$annonce3->localisation}}</p>
                         </div>
                         <p class="pt-2">Publier le {{$annonce3->updated_at->format(' j M Y')}}</p>

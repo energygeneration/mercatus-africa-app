@@ -23,8 +23,8 @@
             @if(auth()->user()->type == 1)
                 <p class="fs-4 text-center">Lien de gestion admin</p>
                 <div class="d-flex justify-content-between">
-                    <a class="fs-4 color1" aria-current="page" href="{{route('home')}}">Liste des annonces</a>
-                    <a class="fs-4 color1" href="{{route('home')}}">Liste des utilisateurs</a>
+                    <a class="fs-4 color1" aria-current="page" href="{{route('admin.home')}}">Liste des annonces</a>
+                    <a class="fs-4 color1" href="{{route('blog_dashboard')}}">Blog dashbord</a>
                     <a class="fs-4 color1" href="{{route('form.blog')}}">Ajout d'article de blog</a>
                 </div>
             @endif

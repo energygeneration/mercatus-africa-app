@@ -33,10 +33,8 @@ Route::get('/form/blog', function () {
     return view('blog.blog-form');
 })->name('form.blog');
 
-Route::post('/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::get('/blog', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/blog/contenu/{id}', [BlogController::class, 'article'])->name('blog.article');
-
 
 Route::get('/', [AppController::class, 'index'])->name('home');
 Route::get('/show/annonce/{id}', [AppController::class, 'show'])->name('show.annonce');
@@ -102,4 +100,11 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/list/annonce', [HomeController::class, 'adminHome'])->name('admin.home');
+
+Route::post('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+Route::get('/edit/blog/{id}', [BlogController::class, 'edit_blog'])->name('edit.blog');
+Route::put('/blog/update/{id}', [BlogController::class, 'update'])->name('update.blog');
+Route::delete('/delete/blog/{id}', [BlogController::class, 'destroy'])->name('destroy.blog');
+Route::get('/blog/dashboard', [BlogController::class, 'blog_dashboard'])->name('blog_dashboard');
+Route::get('/blog/delete/confirm/{id}', [BlogController::class, 'delete_blog'])->name('delete.blog');
 });

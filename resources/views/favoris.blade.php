@@ -14,6 +14,10 @@
 
         <div class="p-5">
 
+            <div class="alert alert-success mt-3">
+                <p>Le système d'ajout de favoris est en cours de conception.</p>
+                </div>
+
         </div>
 
     </div>

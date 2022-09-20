@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table ->string('nom');
             $table ->string('titre');
-            $table ->string('image_blog');
+            $table ->string('image_blog')->nullable();
             $table ->longText('publication');
             $table->timestamps();
         });
