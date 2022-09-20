@@ -7,24 +7,16 @@
     <div class="py-5">
     <div class="container-perso my-5  shadow rounded-4 bg-white position-relative mx-auto">
         <div class="container-onglets text-center m-0 row shadow">
-            <h4 class="onglets fw-bold col p-3 m-0" data-anim="1">Mes annonces</h4>
-            <h4 class="onglets fw-bold col p-3 border-start border-end border-dark m-0 active" data-anim="2">Favoris</h4>
-            <h4 class="onglets fw-bold col p-3 m-0" data-anim="3">Tableau de board</h4>
+            <h4 class="onglets fw-bold col p-3 m-0" onclick="window.location.href = '{{route('myAnnonce')}}'">Mes annonces</h4>
+            <h4 class="onglets fw-bold col p-3 border-start border-end border-dark m-0  active" onclick="window.location.href = '{{route('favoris')}}'">Favoris</h4>
+            <h4 class="onglets fw-bold col p-3 m-0" onclick="window.location.href = '{{route('dashboard')}}'">Tableau de board</h4>
         </div>
 
-        <div class="contenu p-4 w-100" data-anim="1">
-        @include('my_annonces')
+        <div class="p-5">
 
-        </div>
-
-        <div class="contenu p-4 activeContenu" data-anim="2">
-        @include('favoris_section')
-
-        </div>
-
-        <div class="contenu p-4 px-5 w-100" data-anim="3">
-
-        @include('dashboard_contenu')
+            <div class="alert alert-success mt-3">
+                <p>Le système d'ajout de favoris est en cours de conception.</p>
+                </div>
 
         </div>
 
